@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Task Update</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -28,9 +28,7 @@
         <header>
             <?php include_once('./nav.php') ?>
         </header>
-
-
-
+        
         <main class="d-flex justify-content-center align-items-center flex-grow-1 h-100">
             <div class="card p-4" style="width: 25rem;">
                 <form action="" method="post" class="form">
@@ -42,13 +40,13 @@
                     <select><br>
 
                     <label for="task_name" class="form-label">ชื่องาน</label>
-                    <input type="text" placeholder="ใส่ชื่องานที่ดำเนินการ" name="task_name" id="task_name" class="form-control"><br>
+                    <input type="text" placeholder="ใส่ชื่องานที่ดำเนินการ" name="task_name" id="task_name" value="<?= $task['task_name'] ?>" class="form-control"><br>
 
                     <label for="task_period_start" class="form-label">เวลาที่เริ่มดำเนินการ</label>
-                    <input type="time" name="task_period_start" id="task_period_start" class="form-control"><br>
+                    <input type="time" name="task_period_start" id="task_period_start" value="<?= $task['task_period_start'] ?>" class="form-control"><br>
 
                     <label for="task_period_end" class="form-label">เวลาที่เสร็จสิ้น</label>
-                    <input type="time" name="task_period_end" id="task_period_end" class="form-control"><br>
+                    <input type="time" name="task_period_end" id="task_period_end" value="<?= $task['task_period_end'] ?>" class="form-control"><br>
 
                     <label for="task_status" class="form-label">สถานะ</label>
                     <select name="task_status" id="task_status" class="form-select">
@@ -63,8 +61,6 @@
                 </form>
             </div>
         </main>
-
-
 
 
         <footer>

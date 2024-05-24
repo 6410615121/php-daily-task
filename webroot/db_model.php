@@ -39,3 +39,17 @@ function get_all_tasks(){
     $tasks = mysqli_fetch_all($result, MYSQLI_ASSOC);
     return $tasks;
 }
+
+function get_task($id){
+    global $link;
+    $query = "SELECT * FROM Tasks WHERE id='$id'";
+    $result = mysqli_query($link, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($link));
+    }
+
+    $task = mysqli_fetch_assoc($result);
+    return $task;
+}
+

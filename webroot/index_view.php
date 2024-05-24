@@ -27,7 +27,7 @@
 
         <main>
             <div class="p-5">
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped align-middle text-center">
                     <th>Task Type</th>
                     <th>Task title</th>
                     <th>Start time</th>
@@ -47,8 +47,8 @@
                             <td><?= $task['task_status'] ?></td>
                             <td><?= $task['record_timestamp'] ?></td>
                             <td><?= $task['last_update_timestamp'] ?></td>
-                            <td>Update</td>
-                            <td>Delete</td>
+                            <td><a href="./task_update.php/?id=<?= $task['id'] ?>" class="btn btn-primary">Update</a></td>
+                            <td><a href="" class="btn btn-danger">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>
