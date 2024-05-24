@@ -13,8 +13,11 @@ if(isset($_POST['action_insert'])){
     // $start_datetime = $current_date . ' ' . $task_period_start . ':00';
     // $end_datetime = $current_date . ' ' . $task_period_end . ':00';
 
-    insert_daily_task($task_type, $task_name, $task_period_start, $task_period_end, $task_status);
+    if(insert_daily_task($task_type, $task_name, $task_period_start, $task_period_end, $task_status)){
+        echo "<script>location.href='index.php';</script>";
+    }   
+}else{
+    require_once('task_form_view.php');
 }
 
 
-require_once('task_form_view.php');

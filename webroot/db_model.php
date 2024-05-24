@@ -53,3 +53,20 @@ function get_task($id){
     return $task;
 }
 
+function update_task($id, $task_type, $task_name, $task_period_start, $task_period_end, $task_status){
+    global $link;
+    $query = "UPDATE Tasks SET 
+        task_type='$task_type', 
+        task_name='$task_name', 
+        task_period_start='$task_period_start', 
+        task_period_end='$task_period_end', 
+        task_status='$task_status' 
+        WHERE id='$id'";
+    $result = mysqli_query($link, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($link));
+    }
+    return $result;
+}
+

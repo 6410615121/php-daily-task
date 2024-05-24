@@ -45,10 +45,10 @@
                     <input type="text" placeholder="ใส่ชื่องานที่ดำเนินการ" name="task_name" id="task_name" class="form-control"><br>
 
                     <label for="task_period_start" class="form-label">เวลาที่เริ่มดำเนินการ</label>
-                    <input type="time" name="task_period_start" id="task_period_start" class="form-control"><br>
+                    <input type="datetime-local" name="task_period_start" id="task_period_start" class="form-control"><br>
 
                     <label for="task_period_end" class="form-label">เวลาที่เสร็จสิ้น</label>
-                    <input type="time" name="task_period_end" id="task_period_end" class="form-control"><br>
+                    <input type="datetime-local" name="task_period_end" id="task_period_end" class="form-control"><br>
 
                     <label for="task_status" class="form-label">สถานะ</label>
                     <select name="task_status" id="task_status" class="form-select">
