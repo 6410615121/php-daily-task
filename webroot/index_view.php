@@ -48,7 +48,7 @@
                             <td><?= $task['record_timestamp'] ?></td>
                             <td><?= $task['last_update_timestamp'] ?></td>
                             <td><a href="./task_update.php/?id=<?= $task['id'] ?>" class="btn btn-primary">Update</a></td>
-                            <td><a href="" class="btn btn-danger">Delete</a></td>
+                            <td><a href="./index.php?delete_task_id=<?= $task['id'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this task?')">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

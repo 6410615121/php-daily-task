@@ -70,3 +70,19 @@ function update_task($id, $task_type, $task_name, $task_period_start, $task_peri
     return $result;
 }
 
+function delete_task($id){
+    global $link;
+    $query = "DELETE FROM Tasks
+        WHERE id='$id'";
+    $result = mysqli_query($link, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($link));
+    }
+    return $result;
+}
+
+function search_task_by_month(){
+
+}
+
