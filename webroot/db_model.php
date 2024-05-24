@@ -26,3 +26,16 @@ function insert_daily_task($task_type, $task_name, $task_period_start, $task_per
     }
     return $result;
 }
+
+function get_all_tasks(){
+    global $link;
+    $query = "SELECT * FROM Tasks";
+    $result = mysqli_query($link, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($link));
+    }
+
+    $tasks = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $tasks;
+}

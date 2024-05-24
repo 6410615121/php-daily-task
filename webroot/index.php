@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-</head>
-<body>
-    test
-</body>
-</html>
+<?php
+require_once('./db_model.php');
+
+$tasks = get_all_tasks();
+
+require_once('./index_view.php');
+
