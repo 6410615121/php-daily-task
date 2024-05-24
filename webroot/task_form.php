@@ -8,12 +8,12 @@ if(isset($_POST['action_insert'])){
     $task_period_end = $_POST['task_period_end'];
     $task_status = $_POST['task_status'];
 
-    $current_date = date('Y-m-d');
+    // $current_date = date('Y-m-d');
 
-    $start_datetime = $current_date . ' ' . $task_period_start . ':00';
-    $end_datetime = $current_date . ' ' . $task_period_end . ':00';
+    // $start_datetime = $current_date . ' ' . $task_period_start . ':00';
+    // $end_datetime = $current_date . ' ' . $task_period_end . ':00';
 
-    insert_daily_task($task_type, $task_name, $start_datetime, $end_datetime, $task_status);
+    insert_daily_task($task_type, $task_name, $task_period_start, $task_period_end, $task_status);
 }
 
 
