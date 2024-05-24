@@ -93,6 +93,18 @@ function date_search($date){
 
     $tasks = mysqli_fetch_all($result, MYSQLI_ASSOC);
     return $tasks;
+}
 
+function month_search($month){
+    global $link;
+    $query = "SELECT * FROM Tasks WHERE MONTH(task_period_start) = '$month'";
+    $result = mysqli_query($link, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($link));
+    }
+
+    $tasks = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $tasks;
 }
 
