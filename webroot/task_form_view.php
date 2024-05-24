@@ -8,10 +8,10 @@
 <body>
     <form action="" method="post">
         <label for="task_type">ประเภทงาน</label>
-        <select name="task_status" id="task_status">
-            <option value="task_type_development">Development</option>
-            <option value="task_type_test">Test</option>
-            <option value="task_type_document">Document</option>
+        <select name="task_type" id="task_type">
+            <option value="development">Development</option>
+            <option value="test">Test</option>
+            <option value="document">Document</option>
         <select><br>
 
         <label for="task_name">ชื่องาน</label>
@@ -25,11 +25,13 @@
 
         <label for="task_status">สถานะ</label>
         <select name="task_status" id="task_status">
-            <option value="task_status_working">ดำเนินการ</option>
-            <option value="task_status_finished">เสร็จสิ้น</option>
-            <option value="task_status_canceled">ยกเลิก</option>
+            <option value="working">ดำเนินการ</option>
+            <option value="finished">เสร็จสิ้น</option>
+            <option value="canceled">ยกเลิก</option>
         <select><br>
 
+
+        <input type="hidden" name="action_insert" value="1">
         <input type="submit">
     </form>
 </body>
