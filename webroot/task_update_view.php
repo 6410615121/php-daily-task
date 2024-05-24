@@ -34,9 +34,9 @@
                 <form action="" method="post" class="form">
                     <label for="task_type" clas="form-label">ประเภทงาน</label>
                     <select name="task_type" id="task_type" class="form-select">
-                        <option value="development">Development</option>
-                        <option value="test">Test</option>
-                        <option value="document">Document</option>
+                        <option value="development" <?= ($task['task_type'] == 'Development') ? 'selected' : '' ?>>Development</option>
+                        <option value="test" <?= ($task['task_type'] == 'Test') ? 'selected' : '' ?>>Test</option>
+                        <option value="document" <?= ($task['task_type'] == 'Document') ? 'selected' : '' ?>>Document</option>
                     <select><br>
 
                     <label for="task_name" class="form-label">ชื่องาน</label>
