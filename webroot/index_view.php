@@ -27,6 +27,15 @@
 
         <main>
             <div class="p-5">
+                <form action="" class="form mb-3" method="post">
+                    <div class="d-flex flex-row">
+                        <input type="date" class="form-control me-2" name="date">
+                        <input type="hidden" name="action_date_search" value="1">
+                        <input type="submit" class="btn btn-primary" value="Date Search">
+                    </div>
+                </form>
+
+
                 <table class="table table-bordered table-striped align-middle text-center">
                     <th>Task Type</th>
                     <th>Task title</th>

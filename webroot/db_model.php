@@ -82,7 +82,17 @@ function delete_task($id){
     return $result;
 }
 
-function search_task_by_month(){
+function date_search($date){
+    global $link;
+    $query = "SELECT * FROM Tasks WHERE DATE(task_period_start) = '$date'";
+    $result = mysqli_query($link, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($link));
+    }
+
+    $tasks = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $tasks;
 
 }
 
