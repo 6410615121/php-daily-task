@@ -27,21 +27,24 @@
 
         <main>
             <div class="p-5">
-                <form action="" class="form mb-1" method="post">
-                    <div class="d-flex flex-row">
-                        <input type="date" class="form-control me-2" name="date">
-                        <input type="hidden" name="action_date_search" value="1">
-                        <input type="submit" class="btn btn-primary" value="Date Search">
-                    </div>
-                </form>
+                <div class="d-flex flex-row justify-content-end">
+                    <form action="" class="form" method="post">
+                        <div class="d-flex flex-row me-3">
+                            <input type="date" class="form-control me-2" name="date">
+                            <input type="hidden" name="action_date_search" value="1">
+                            <input type="submit" class="btn btn-primary" value="Date Search">
+                        </div>
+                    </form>
 
-                <form action="" class="form mb-3" method="post">
-                    <div class="d-flex flex-row">
-                        <input type="month" class="form-control me-2" name="month">
-                        <input type="hidden" name="action_month_search" value="1">
-                        <input type="submit" class="btn btn-primary" value="Month Search">
-                    </div>
-                </form>
+                    <form action="" class="form" method="post">
+                        <div class="d-flex flex-row mb-3">
+                            <input type="month" class="form-control me-2" name="month">
+                            <input type="hidden" name="action_month_search" value="1">
+                            <input type="submit" class="btn btn-primary" value="Month Search">
+                        </div>
+                    </form>
+                </div>
+
 
 
                 <table class="table table-bordered table-striped align-middle text-center">
