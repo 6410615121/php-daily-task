@@ -1,20 +1,24 @@
 <?php
 require_once('db_model.php');
-
+$current_show = 'None';
 
 if(isset($_POST['action_date_search'])){
     $date = $_POST['date'];
+    $current_show = $date;
     // echo $date;
 
     $tasks = date_search($date);
 }elseif(isset($_POST['action_month_search'])){
     $month = $_POST['month'];
+    $current_show = $month;
     $month = date('m', strtotime($month));
     // echo $month;
 
     $tasks = month_search($month);
 }else{
     $date = date('Y-m-d');
+    $current_show = $date;
+
     $tasks = date_search($date);
     // echo $date;
 }

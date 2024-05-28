@@ -47,6 +47,8 @@
                         </form>
                     </div>
                     
+                    <h3><?= $current_show ?></h3>
+
                     <table class="table table-bordered w-50 mb-4">
                         <tr>
                             <th>Task Type</th>
